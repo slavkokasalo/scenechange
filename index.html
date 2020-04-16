@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 210px;
+            left: 378px;
+        }
+            
+        </style>
+    </head>
+    <body>
+
+    <a id="plaža"><img src="https://www.kasandbox.org/programming-images/landscapes/beach-with-palm-trees.png"></a>
+
+    <img src="https://www.kasandbox.org/programming-images/avatars/leafers-seedling.png" id="leafers">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <button>click meeee!</button>
+    <script>
+        $("#plaža").on("click", function(event) {
+        $("#leafers").css("position","absolute")
+        .css("top",event.pageY -95 + "px")
+        .css("left",event.pageX -50 + "px");
+        });
+        $(document).ready(function(){
+  $("button").click(function(){
+    $("#plaža").css("color", "red")
+      .slideUp(2000)
+      .slideDown(2000);
+  });
+});
+    </script>
+    </body>
+</html>
